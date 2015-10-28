@@ -197,7 +197,7 @@ Before deploying CoreOS on cloud.ca, you need following:
 5. Add your cloud-config content (Optional):
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
-    <img src="img/cloudca-addinstance_step3.png" class="screenshot" />
+    <img src="img/cloudca-addinstance_step4.png" class="screenshot" />
     <div class="caption">New Instance data volume</div>
   </div>
 </div>
