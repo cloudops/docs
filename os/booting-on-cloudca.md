@@ -18,7 +18,7 @@ schedules per channel. You can [disable this feature][reboot-docs], although we
 don't recommend it. Read the [release notes][release-notes] for specific
 features and bug fixes.
 
-The cloud.ca CoreOS image is build from the official stable release CloudStack
+The cloud.ca CoreOS image is built from the official stable release CloudStack
 image.
 
 <div id="cca-images">
@@ -30,8 +30,8 @@ image.
   <div class="tab-content coreos-docs-image-table">
     <div class="tab-pane" id="alpha">
       <div class="channel-info">
-        <p>The alpha channel closely tracks master and is released to frequently. The newest versions of <a href="{{site.baseurl}}/using-coreos/docker">Docker</a>, <a href="{{site.baseurl}}/using-coreos/etcd">etcd</a> and <a href="{{site.baseurl}}/using-coreos/clustering">fleet</a> will be available for testing.
-        To use alpha channel on cloud.ca, use "CoreOS Stable" template and update cloud-config file to change the channel to alpha:
+        <p>The Alpha channel closely tracks master and is released frequently. The newest versions of <a href="{{site.baseurl}}/using-coreos/docker">Docker</a>, <a href="{{site.baseurl}}/using-coreos/etcd">etcd</a> and <a href="{{site.baseurl}}/using-coreos/clustering">fleet</a> will be available for testing.
+        To use the Alpha channel on cloud.ca, select the "CoreOS Stable" template and update the cloud-config to change the channel to alpha:
         </p>
       </div>
 ```yaml
@@ -43,8 +43,8 @@ coreos:
     </div>
     <div class="tab-pane" id="beta">
       <div class="channel-info">
-        <p>The beta channel consists of promoted alpha releases.
-        To use beta channel on cloud.ca, use "CoreOS Stable" template and update cloud-config file to change the channel to beta:
+        <p>The Beta channel consists of promoted alpha releases.
+        To use the Beta channel on cloud.ca, use the "CoreOS Stable" template and update the cloud-config to change the channel to beta:
         </p>
       </div>
 ```yaml
@@ -90,11 +90,11 @@ cluster of machines into a minimal useful state and ideally shouldn't be used
 to configure anything that isn't standard across many hosts. Once the machine is
 created, cloud-config cannot be modified.
 
-You can provide cloud-config data using cloud.ca management portal or thru the
+You can provide cloud-config data using cloud.ca management portal or through the
 CloudStack API. When using CloudStack API, the cloud-conf must be base64 encoded
-as ``userdata`` parameter.
+as the ``userdata`` parameter.
 
-The current cloud-config example use a DATA-disk as docker datastore
+The current cloud-config example use a data disk as the docker datastore
 (/var/lib/docker).
 
 
@@ -141,9 +141,8 @@ coreos:
         Type=btrfs
 ```
 
-The $public_ipv4 substitution variables is not supported in cloud-config on
-cloud.ca. To use multi-region cluster, cluster configuration must be performed
-manually and port-forwarding configured.
+The $public_ipv4 substitution variable is not supported in cloud-config on
+cloud.ca. To use a multi-region cluster, the cluster configuration and the port-forwarding must be done manually.
 
 
 ### Adding More Machines
@@ -155,7 +154,7 @@ automatically.
 
 ## Launching Instances
 
-Before deploying CoreOS on cloud.ca, you need following: 
+Before deploying CoreOS on cloud.ca, you need the following: 
 
 * An account on https://<organization>.cloud.ca.
 * Access to an Environment with a running VPC. VPC and subnet creation are not
@@ -173,35 +172,35 @@ Before deploying CoreOS on cloud.ca, you need following:
     <div class="caption">Add instance</div>
   </div>
 </div>
-2. define instance hostname, offering type and select the template "CoreOS Stable"
+2. Define the instance name, offering type and select the template "CoreOS Stable"
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
     <img src="img/cloudca-addinstance_step1.png" class="screenshot" />
-    <div class="caption">New Instance details</div>
+    <div class="caption">New instance details</div>
   </div>
 </div>
 3. Create a data disk, will be mount in ``/var/lib/docker`` (Optional):
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
     <img src="img/cloudca-addinstance_step2.png" class="screenshot" />
-    <div class="caption">New Instance data volume</div>
+    <div class="caption">New instance data volumes</div>
   </div>
 </div>
-4. Enable Port forwarding rule for SSH (Optional) and Assign your SSH key to the new instance:
+4. Enable port forwarding rule for SSH (Optional) and assign your SSH key to the new instance:
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
     <img src="img/cloudca-addinstance_step3.png" class="screenshot" />
-    <div class="caption">New Instance data volume</div>
+    <div class="caption">New instance connectivity</div>
   </div>
 </div>
-5. Add your cloud-config content (Optional):
+5. Add your cloud-config content (optional):
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
     <img src="img/cloudca-addinstance_step4.png" class="screenshot" />
-    <div class="caption">New Instance data volume</div>
+    <div class="caption">New instance user data</div>
   </div>
 </div>
-6. to SSH into the VM, get the Public IP of the VM from VM details or thru your
+6. to SSH into the instance, get the Public IP of the instance from instance details or through your
    remote management VPN using username "core".
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
@@ -230,7 +229,7 @@ core@coreos-node01 ~ $ etcdctl member list
 ```
 
 
-## more CoreOS documentations
+## More CoreOS documentation
 
 [update-docs]: {{site.baseurl}}/using-coreos/updates
 [reboot-docs]: {{site.baseurl}}/docs/cluster-management/debugging/prevent-reboot-after-update
