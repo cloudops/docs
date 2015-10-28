@@ -31,7 +31,7 @@ image.
     <div class="tab-pane" id="alpha">
       <div class="channel-info">
         <p>The Alpha channel closely tracks master and is released frequently. The newest versions of <a href="{{site.baseurl}}/using-coreos/docker">Docker</a>, <a href="{{site.baseurl}}/using-coreos/etcd">etcd</a> and <a href="{{site.baseurl}}/using-coreos/clustering">fleet</a> will be available for testing.
-        To use the Alpha channel on cloud.ca, select the "CoreOS Stable" template and update the cloud-config file to change the channel to alpha:
+        To use the Alpha channel on cloud.ca, select the "CoreOS Stable" template and update the cloud-config to change the channel to alpha:
         </p>
       </div>
 ```yaml
@@ -44,7 +44,7 @@ coreos:
     <div class="tab-pane" id="beta">
       <div class="channel-info">
         <p>The Beta channel consists of promoted alpha releases.
-        To use the Beta channel on cloud.ca, use the "CoreOS Stable" template and update the cloud-config file to change the channel to beta:
+        To use the Beta channel on cloud.ca, use the "CoreOS Stable" template and update the cloud-config to change the channel to beta:
         </p>
       </div>
 ```yaml
@@ -142,7 +142,7 @@ coreos:
 ```
 
 The $public_ipv4 substitution variable is not supported in cloud-config on
-cloud.ca. To use a multi-region cluster, the cluster and the port-forwarding must be configured manually.
+cloud.ca. To use a multi-region cluster, the cluster configuration and the port-forwarding must be done manually.
 
 
 ### Adding More Machines
@@ -193,7 +193,7 @@ Before deploying CoreOS on cloud.ca, you need the following:
     <div class="caption">New instance connectivity</div>
   </div>
 </div>
-5. Add your cloud-config content:
+5. Add your cloud-config content (optional):
 <div class="row">
   <div class="col-lg-8 col-md-10 col-sm-8 col-xs-12">
     <img src="img/cloudca-addinstance_step4.png" class="screenshot" />
