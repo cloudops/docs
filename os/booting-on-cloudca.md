@@ -36,7 +36,7 @@ image.
         <a href="{{site.baseurl}}/using-coreos/clustering">fleet</a> will be
         available for testing. To use the Alpha channel on cloud.ca, select the
         "CoreOS Stable" template and update the cloud-config to
-        [change the channel to alpha][switching-channels] :
+        [change the channel to alpha][switching-channels]:
         </p>
       </div>
 ```yaml
@@ -50,7 +50,7 @@ coreos:
       <div class="channel-info">
         <p>The Beta channel consists of promoted alpha releases. To use the Beta
         channel on cloud.ca, use the "CoreOS Stable" template and update the
-        cloud-config to [change the channel to beta][switching-channels] :
+        cloud-config to [change the channel to beta][switching-channels]:
         </p>
       </div>
 ```yaml
